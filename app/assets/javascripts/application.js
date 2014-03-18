@@ -24,26 +24,3 @@
 //= require_tree
 
 app.init();
-
-$(document).on('ready page:load', function () {
-	// Animated autohide navbar
-	$(".navbar").headroom({
-  		"tolerance": 0,
-  		"offset": 0,
-  		"classes": {
-    		"initial": "animated",
-    		"pinned": "slideDown",
-    		"unpinned": "slideUp"
-  		}
-	});
-});
-
-// Adds a loading spinner
-function addLoadingSpinner() {
-  $('#main').append($('<div></div>').addClass('loading-spinner'));
-}
-
-// Disables a broadcast
-function disableBroadcast(path) {
-  $.ajax({url: path});
-}

@@ -1,14 +1,8 @@
 class LinksController < ApplicationController
   def create
 
-  	# 'create' is reserved for creating links
-  	if params[:link][:mask] == 'create' or params[:link][:mask] == '/create'
-  		flash["alert mask_is_reserved"] = 'This is a reserved mask!'
-  		redirect_to root_path
-
   	# numbers are reserved for ids
-  	elsif
-  		params[:link][:mask] =~ /^-?[0-9]+$/
+  	if params[:link][:mask] =~ /^-?[0-9]+$/
   		flash["alert mask_is_num"] = 'You can\t mask URLs with numbers!'
   		redirect_to root_path
 
@@ -19,12 +13,15 @@ class LinksController < ApplicationController
 
     # no matches? store it!
   	else
+  		clean_mask = params[:link][:mask].downcase.gsub(/[^a-z0-9 ]/, '').gsub(/ /, '-')
+  		params[:link][:mask] = clean_mask
+
   		@link = Link.new(params[:link].permit(:original,:mask))
 	    if @link.save
-	      notice["link_id"] = "#{ENV['BASE_URL']}#{@link.id}"
+	      flash["notice link_id"] = "#{ENV['BASE_URL']}#{@link.id}"
 	      # give a link to the mask if provided
 	      unless @link.mask.blank?
-	      	notice["link_mask"] = "#{ENV['BASE_URL']}#{@link.mask}"
+	      	flash["notice link_mask"] = "#{ENV['BASE_URL']}#{@link.mask}"
 	      end
 
 	      redirect_to root_path

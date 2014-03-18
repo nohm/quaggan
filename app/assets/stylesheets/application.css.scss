@@ -11,19 +11,11 @@
  *= require_self
 */
 
-// Import bourbon mixins
-@import "bourbon";
-
 @import "variables";
 
 // Import bootstrap completely
 @import "bootstrap";
 
-@import "navbar";
-@import "stats";
-@import "invoices";
-@import "spinner";
-@import "landing";
 @import "footer";
 
 body {
@@ -58,95 +50,12 @@ html, body {
   margin-top: auto;
 }
 
-// Empty tables
-.empty_list {
-  padding: 15px;
-}
-
-// /invoices class titles need no margin
-table h6 {
-  margin: 0 !important
-}
-
-.panel-heading h4 {
-  margin-bottom: 0 !important;
-}
-
-// Remove margins and padding on tables inside panels
-.panel-table {
-  padding: 0 !important;
-  .col-md-6 {
-    &:nth-child(2n+2) {
-      padding-left: 0 !important;
-    }
-    &:nth-child(2n+1) {
-      padding-right: 0 !important;
-    }
-  }
-  table {
-    margin-bottom: 0 !important;
-    tr:first-child {
-      td {
-        border-top: 0 !important;
-      }
-    }
-  }
-}
-
-@media (min-width: 768px) {
-  .panel-table .col-md-6 {
-    &:nth-child(2n+2) {
-      padding-left: 15px !important;
-    }
-    &:nth-child(2n+1) {
-      padding-right: 15px !important;
-    }
-  }
-}
-
-// Headroom.js styles
-.animated {position: fixed;top: 0;left: 0;right: 0;transition: all 0.8s ease-in-out;}
-.slideUp {top: -60px;}
-.slideDown {top: 0;}
-
-// Give buttons some top margin and minimum width
-.btn-index, .btn-chart {
-  min-width: 125px;
-  margin-bottom: 5px !important;
-}
-.btn-chart {
-  min-width: 300px;
-}
-
-// Give the 'add attachment' button some margin for mobile
-.btn-images {
-  margin: 5px;
-}
-
 // Give glyphicons in anchors same colors
 a span {
   color: #333
 }
 a span:hover {
   color: #000
-}
-
-// Languageflags, generated with flag-sprites.com
-.languageflag{
-  display:inline-block;
-  height:11px;
-  width:16px;
-  background: url(../images/flags.png) no-repeat;
-}
-
-.nlflag {
-  background-position: -16px -11px;
-}
-.enflag {
-  background-position: 0 -11px;
-}
-.deflag {
-  background-position: -16px 0;
 }
 
 // Footer styling
