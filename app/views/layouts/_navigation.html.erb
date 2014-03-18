@@ -1,0 +1,24 @@
+<ul class="nav navbar-nav">
+    <li role="presentation">
+        <p class="text-muted info-label">
+          <% if user_signed_in? %>
+            <%= current_user.name %>
+            <% unless params[:company_id].nil? %>
+              <%= ' @ ' + Company.find(params[:company_id]).title %>
+            <% end %>
+          <% end %>
+        </p>
+    </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+  <li role="presentation">
+    <%= link_to(edit_user_registration_path) do %>
+      <%= t('layouts.navigation.edit') %>
+    <% end %>
+  </li>
+  <li role="presentation">
+    <%= link_to(destroy_user_session_path, :method => 'delete', :role => "menuitem", :tabindex => "-1") do %>
+      <%= t('layouts.navigation.logout') %>
+    <% end %>
+  </li>
+</ul>

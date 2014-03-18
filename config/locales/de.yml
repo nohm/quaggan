@@ -1,0 +1,454 @@
+de:
+# TODO: Finish translations
+
+######################
+##     GLOBALS      ##
+######################
+  global: 
+    users: 'Nützer'
+    appliances: 'Geräte'
+    classes: 'Klassen'
+    history: 'Geschichte'
+    broadcasts: 'Broadcasts'
+    companies: 'Geschäfte'
+
+    unauthorized: 'Du hast keine Genehmigung.'
+    unauth_admin: 'Du hast keine Verwaltungsrechte.'
+    no_company: 'Bitte eröffene die Startseite.'
+    errors: 'Bitte behebe die understehende Fehler.'
+
+    close: 'Schließen'
+    back: 'Zurück'
+    delete: 'Entfernen'
+    sure: 'Bist du sicher?'
+    y: 'Ja'
+    n: 'Nee'
+    total: 'Total'
+
+    name: 'Name'
+    username: 'Nützername'
+    abbrevation: 'Abkürzung'
+    url: 'URL'
+    message: 'Nachricht'
+    email: 'Email'
+    title: 'Title'
+    short: 'Short'
+    address: 'Address'
+    password: 'Kennwort'
+    password_confirmation: 'Kennwort bestätigung'
+
+    status: 'Status'
+    number: 'Nummer'
+    appliance: 'Gerät'
+    brand: 'Marke'
+    typenum: 'Modell'
+    serialnum: 'Seriennummer'
+    defect: 'Was ist defect?'
+    repair: 'Was ist repariert worden?'
+    ordered: 'Teile bestellt?'
+    testera: 'Erste Tester'
+    testerb: 'Zweite Tester'
+    test: 'Test OK'
+    repaired: 'Repariert'
+    ready: 'Fertig'
+    scrap: 'Schrott'
+    accessoires: 'Zubehör'
+    class: 'Klasse'
+    note: 'Notiz'
+    test_price: 'Test price'
+    repair_price: 'Repair price'
+    scrap_price: 'Scrap price'
+    name: 'Name'
+    amount: 'Amount'
+    amount_per_app: 'Amount per app'
+    minimum: 'Minimum'
+    send_mail: 'Send mail?'
+######################
+##     /GLOBALS     ##
+######################
+
+######################
+##      VIEWS       ##
+######################
+# app/views/kaminari
+  views:
+    pagination:
+      first: "&laquo; Erste"
+      last: "Letzte &raquo;"
+      previous: "&lsaquo; Vorige"
+      next: "Nächste &rsaquo;"
+      truncate: "..."
+
+# app/views/layouts
+  layouts:
+    landing:
+      welcome: 'Willkommen in diesen Datenbank.'
+      warning: 'Oh nein, '
+      warning_msg: ' ihren Browser is verältert und unterstutzt nicht alle möchlichkeiten diese seite! Sie meuchten vielleicht aktualisieren zu Internet Explorer 10, Firefox 24+, Chrome 20+ oder Opera 12+</div>'
+      
+    header:
+      toggle: 'Schalt navigation'
+
+    footer:
+      copyright: 'Hergestellt und gepflegt von '
+      license: 'Code licensed under '
+      forgot_pass: 'Kennwort vergessen?'
+
+    navigation:
+      edit: 'Account bearbeiten'
+      logout: 'Ausloggen'
+
+    signin: 
+      button: 'Anmelden'
+      button_send: 'Anmelden...'
+
+    signup: 
+      button: 'Registrieren'
+      button_send: 'Registrieren...'
+
+    report:
+      button_large: 'Melde ein Problem'
+      button: 'Sende nachricht'
+      button_send: 'Gesendet worden...'
+
+# app/views/companies
+  company:
+    index:
+      title: 'Badger · Company panel'
+      legend: 'Companies'
+      empty_list: 'No companies here'
+      new_company: 'New company'
+    new:
+      title: 'Badger · New company'
+      legend: 'New company'
+      button: 'Save'
+      button_send: 'Saving...'
+    edit:
+      title: 'Badger · Edit company'
+      legend: 'Edit company'
+      button: 'Save'
+      button_send: 'Saving...'
+# app/controller/companies & model
+    controller:
+      company_added: 'Company added.'
+      company_deleted: 'Company deleted.'
+
+# app/views/entries
+  entry:
+    sticker: 'Sticker'
+    ticket: 'Zettel'
+    edit:
+      title: 'Badger · Eintrag bearbeiten'
+      legend: 'Eintrag bearbeiten'
+      message: 'Zuerst die Eintrag speichern, dann zeiche es und dort können Bilder hinzufügen.'
+      button: 'Aktualisieren'
+      button_send: 'Aktualisieren...'
+    entryhistory:
+      title: 'Badger · Geschichte überblick'
+      legend: 'Geschichte'
+      empty_list: 'Keine Geschichte hier'
+      who: 'Wem?'
+      what: 'Was?'
+      when: 'Wann?'
+    index:
+      title: 'Badger · Einträge für '
+      legend: 'Einträge für '
+      empty_list: 'Keine Einträge hier'
+      back: 'Zurück zum überblick'
+      add_entry: 'Neuer Eintrag'
+      search: 'Suchen'
+      searchnum: 'Suche Nummer..'
+      searchbrand: 'Suche Marke..'
+      searchtype: 'Suche Modell..'
+      searchserial: 'Suche Seriennummer..'
+    new:
+      title: 'Badger · Neuer Eintrag'
+      legend: 'Neuer Eintrag'
+      message: 'Zuerst die Eintrag speichern, dann zeiche es und dort können Bilder hinzufügen.'
+      button: 'Speichern'
+      button_send: 'Speichern...'
+    show:
+      title: 'Badger · Eintrag überblick'
+      legend: 'Eintrag'
+      barcode: 'Strichcode'
+      sent: 'Gesendet?'
+      yes: 'Ja - '
+      no: 'Nee'
+      images: 'Bilder'
+      add_attachment: 'Neuer Anhang'
+      select: 'Wähle eine Datei..'
+      button: 'Speichern'
+      button_send: 'Speichern...'
+      zip: 'Zip erstellen'
+      sticker: 'Sticker erstellen'
+      edit: 'Eintrag bearbeiten'
+      delete: 'Eintrag löschen'
+      view: 'Gechichte anzeigen'
+
+# app/controllers/entries & model
+    status:
+      new: 'Neu'
+      tested: 'Geprüft'
+      repaired: 'Repariert'
+      scrap: 'Schrott'
+      accessoires: 'Warten auf Accessoires'
+      ready: 'Fertig'
+      sent: 'Gesendet '
+    controller:
+       added: 'Eintrag hinzugefügt.'
+       updated: 'Eintrag aktualisiert.'
+       deleted: 'Entry gelöscht.'
+       images: 'Bilder'
+
+# app/views/home
+  home:
+    batch:
+      title: 'Badger · Stapel-aktualisierung'
+      legend: 'Stapel-aktualisierung'
+      warning: 'Warnung!'
+      warning_msg: ' Sie können hier einfach viele Fehler machen! Zahlen oben eingeben, ermöglichen die Boxen neben dem Feld den sie verwenden wollte, füllen sie den Felder un speichern.'
+      ordernumbers: 'Eintragnummern'
+      button: 'Aktualisieren'
+      button_send: 'Aktualisieren...'
+      enable: 'Ermöglichen'
+    index:
+      welcome: 'Willkommen in diesen Datenbank.'
+      guest: 'Willkommen Gast!'
+      guest_msg: 'Sie haben die meiste Functionen zur Verfügung die ein Techniker zum verwaltung braucht, es gibt mehrere Rechten aber dazu gebrauchen sie Verwaltungsrechte, und das steht Gästen leider nicht zur Verfügung.'
+      entries: 'Einträge'
+      invoices: 'Quittungen'
+      stats: 'Statistik'
+      batch: 'Stapel'
+      type: 'Types'
+      no_company: 'Sie werden bald wie möchlich bei ihren Firma zutrutt haben in dieses Programm. Eile? Kontaktier den Verwalter '
+      no_company_anchor: 'here'
+
+# app/controllers/home & model
+    controller:
+      success: 'Stapel-aktualisiert'
+      success_end: 'Artikel!'
+      error_exist: 'existiert nicht!'
+      error_wrong: 'Gehört nicht zu'
+      report_sent: 'Nachricht gesendet.'
+
+# app/views/invoices
+  invoice:
+    index:
+      title: 'Badger · Quittungen für '
+      legend: 'Quittungen für '
+      empty_list: 'Keine Quittungen hier'
+      items: 'Artikel'
+      date: 'Datum'
+      add_invoice: 'Neuer Quittung'
+    new:
+      title: 'Badger · Neuer Quittung'
+      legend: 'Neuer Quittung'
+      items: 'Artikel'
+      button: 'Speichern'
+      button_send: 'Speichern...'
+    show:
+      title: 'Badger · Quittung'
+      legend: 'Quittung'
+      sender: 'Absender'
+      addressee: 'Empfänger'
+      date: 'Datum'
+      all_types: 'All types'
+      empty_list: 'Kein Einträge hier' 
+      signature_sender: 'Unterschrift Absender'
+      signature_addressee: 'Unterschrift Empfänger'
+
+# app/controllers/invoices & model
+    controller:
+      tested: 'Geprüft'
+      repaired: 'Repariert'
+      scrapped: 'Verschrotter'
+      deleted: 'Quittung gelöscht.'
+      added: 'Quittung hinzugefügt.'
+      no_exist: 'existiert nicht!'
+      already_sent: 'ist schon gesendet worden!'
+      wrong_company: 'Gehört nicht zu'
+
+# app/views/appliances
+  appliance:
+    index:
+      title: 'Badger · Geräte Tafel'
+      legend: 'Geräte'
+      empty_list: 'Keine Geräte hier'
+      new_appliance: 'Neuer Gerät'
+      button: 'Speichern'
+      button_send: 'Speichern...'
+    new: 
+      title: 'Badger · Neuer Gerät'
+      legend: 'Neuer Gerät'
+      button: 'Speichern'
+      button_send: 'Speichern...'
+
+# app/controllers/appliances & model
+    controller:
+      notice_added: 'Gerät hinzugefügt.'
+      notice_updated: 'Appliance updated.'
+      notice_update_fail: 'Something went wrong updating.'
+      notice_deleted: 'Attachment removed.'
+      notice_delete_fail: 'Something went wrong removing.'
+
+# app/views/classifications
+  classes:
+    index:
+      title: 'Badger · Klasse Tafel'
+      legend: 'Klasse'
+      empty_list: 'Keine Klassen hier'
+      new_class: 'Neuer Klasse'
+    new: 
+      title: 'Badger · Neuer Klasse'
+      legend: 'Neuer Klasse'
+      button: 'Speichern'
+      button_send: 'Speichern...'
+
+# app/controllers/classifications & model
+    controller:
+      notice_added: 'Klasse hinzugefügt.'
+
+# app/views/types
+  type:
+    index:
+      title: 'Badger · Types for '
+      legend: 'Types for '
+      empty_list: 'No types here'
+      add_type: 'Add type'
+    new:
+      title: 'Badger · New type'
+      legend: 'New type'
+      button: 'Save'
+      button_send: 'Saving...'
+    edit:
+      title: 'Badger · Edit type'
+      legend: 'Edit type'
+      button: 'Save'
+      button_send: 'Saving...'
+
+# app/controllers/types & model
+    controller:
+      type_added: 'Type added.'
+      type_updated: 'Type updated.'
+      type_deleted: 'Type deleted.'
+
+# app/views/stocks
+  stock:
+    index:
+      title: 'Badger · Stock for '
+      legend: 'Stock for '
+      empty_list: 'No stock here'
+      add_stock: 'Add stock'
+    new:
+      title: 'Badger · New stock'
+      legend: 'New stock'
+      button: 'Save'
+      button_send: 'Saving...'
+    edit:
+      title: 'Badger · Edit stock'
+      legend: 'Edit stock'
+      button: 'Save'
+      button_send: 'Saving...'
+
+# app/controllers/stocks & model
+    controller:
+      stock_added: 'Stock added.'
+      stock_updated: 'Stock updated.'
+      stock_deleted: 'Stock deleted.'
+
+# app/views/users
+  user:
+    user:
+      change: 'Function ändern'
+    index:
+      title: 'Badger · Nützer Tafel'
+      legend: 'Nützer'
+      registered: 'Registriert'
+      role: 'Function'
+    show:
+      title: 'Badger · Nützer überblick'
+      registered: 'Registriert'
+      last_signin: 'Letzte Anmeldung'
+      signin_count: 'Anmeldungszahl'
+
+# app/controllers/users & model
+    controller:
+      update_success: 'Nützer aktualisiert.'
+      update_fail: 'Keine möchlichkeit zum Nützeraktualisierung.'
+      delete_success: 'Nützer gelöscht.'
+      delete_fail: 'Keine möchlichkeit dich selbst zu löschen.'
+
+# app/views/stats
+  stats:
+    index:
+      title: 'Badger · Statsitik für '
+      simpler: 'Möchte einfachere Statistik?'
+      fancier: 'Möchte schönere Statistik?'
+      global: 'Global'
+      global_label: 'Globale Statistik'
+      brand_label: 'Marke und Modell specifizierte Statistik'
+      showhide: 'Anzeigen/Verbergen '
+      
+# app/controllers/stats & model
+    status:
+      label: 'Statistik für '
+      amount: 'Summe'
+      new: 'Neu'
+      tested: 'Geprüft'
+      repaired: 'Repariert'
+      scrap: 'Schrott'
+      waiting: 'Wartent'
+      ready: 'Fertig'
+      sent: 'Gesendet'
+      skipped: 'Übersprungen'
+      total: 'Gesamt'
+
+# app/views/broadcasts
+  broadcast:
+    index:
+      title: 'Badger · Broadcast panel'
+      legend: 'Broadcasts'
+      empty_list: 'No broadcasts here'
+      title_label: 'Title'
+      text_label: 'Text'
+      new_broadcast: 'Add broadcast'
+    new:
+      title: 'Badger · New broadcast'
+      legend: 'New broadcast'
+      title_label: 'Title'
+      text_label: 'Text'
+      button: 'Save'
+      button_send: 'Saving...'
+# app/controllers/broadcasts & model
+    controller:
+      notice_added: 'Broadcast added'
+      notice_deleted: 'Broadcast deleted'
+
+# app/views/mailer
+  mailer:
+    base:
+      welcome: 'Willkommen beim Badger, '
+      new_user: 'Neue registrierung für Badger'
+      error_report: 'Badger: Fehlerbericht'
+      role_update: 'Badger: Function aktualisiert'
+    error_report:
+      title: 'Badger: Fehlerbericht'
+      sender: 'Ein neue Fehlerbericht is fertiggestellt von: '
+      message: 'Ihren Bericht:'
+    new_user:
+      title: 'Neue registrierung für Badger'
+      message: 'Eine neue Person hat sich registriert für Badger, ihren Nützername ist: '
+      site_link: 'Zum aktualisieren ihre Genehmigung, folgen sie bitte diese Link: '
+    role_update:
+      title: 'Badger: Function aktualisiert'
+      new_role: 'Ihre Function ist geändert worden in: '
+      site_link: 'Um and zu melden, folgen sie bitte diese Link: '
+      greet: 'Wir wünschen sie einen wunderschönen Tag.'
+    welcome_msg:
+      title: 'Willkommen beim Badger, '
+      message: 'Sie sind erfolgriech registriert beim Badger, ihren Nützername ist: '
+      site_link: 'Um an zu melden, folgen sie bitte diese Link: '
+      greet: 'Danke fur das registrieren unde wir wünschen sie einen wunderschönen Tag!'
+######################
+##      /VIEWS      ##
+######################
