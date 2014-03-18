@@ -1,7 +1,7 @@
-Badger
+Quaggan
 ======
 
-This is a data storage project build for the company I work at, it's fully open source if you care for using it and should be easy to setup
+Extremely basic URL Shortener
 
 Requirements
 ------------
@@ -9,8 +9,6 @@ Requirements
 * Ruby 2.1.0 or newer
 * Rails 4.0.2 or newer
 * PostgreSQL 9.1 or newer
-* ImageMagick
-* Graphviz
 * Git
 
 Database
@@ -36,10 +34,10 @@ Installation guide, set up PostgreSQL, then the project.
 
 * Create a user and the databases
 ```
-createuser badger -d -s
-createdb -Obadger -Eutf8 badger_development (only needed for development)
-createdb -Obadger -Eutf8 badger_production (only needed for production)
-createdb -Obadger -Eutf8 badger_test (only needed for development)
+createuser quaggan -d -s
+createdb -Obadger -Eutf8 quaggan_development (only needed for development)
+createdb -Obadger -Eutf8 quaggan_production (only needed for production)
+createdb -Obadger -Eutf8 quaggan_test (only needed for development)
 ```
 
 #### Project
@@ -48,8 +46,8 @@ createdb -Obadger -Eutf8 badger_test (only needed for development)
 * Pick a folder you'd like to use and clone the git repository in there
 ```
 cd <where-you-want-the-project>
-git clone git@github.com:nohm/badger.git
-cd badger
+git clone git@github.com:nohm/quaggan.git
+cd quaggan
 ```
 * Install dependencies
 ```
