@@ -3,14 +3,14 @@
     
     <div class="panel panel-default">
       <div class="panel-heading">
-        <div class="panel-title">New shortening</div>
+        <div class="panel-title">Quaggan shorten link!</div>
       </div>
       <div class="panel-body">
-        <%= f.text_field :original, label: 'Link to shorten:' %>
-        <%= f.text_field :mask, label: 'Optional mask to use:' %>
+        <%= f.text_field :original, hide_label: true, placeholder: 'http://example.com/' %>
+        <%= f.text_field :mask, hide_label: true, placeholder: 'Optional mask e.g. example-mask' %>
       </div>
       <div class="panel-footer">
-        <%= f.submit 'Shorten' %>
+        <%= f.submit 'Shorten!' %>
       </div>
     </div>
   <% end %>

@@ -11,7 +11,6 @@ gem 'pg'
 # CSS
 gem 'sass-rails'
 gem 'bootstrap-sass', '~> 3.1.0'
-gem 'bourbon'
 # Javascript
 gem 'coffee-rails'
 gem 'jquery-rails'

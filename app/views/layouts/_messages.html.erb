@@ -1,11 +1,21 @@
 <div id="alert-box">
   <% flash.each do |name, msg| %>
     <% if msg.is_a?(String) %>
-        <div class="alert alert-<%= name.split(' ')[0] == "notice" ? "success" : "danger" %>">
-          <a class="close" data-dismiss="alert">&#215;</a>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
-          <% flash.delete(name) %>
-        </div>
+    	<% if name == "notice" %>
+    		<div class="alert alert-success">
+    			<div>Coo! Links made!</div>
+    		  <% msg.split('<br>').each do |link| %>
+	          	<input class="form-control" value="<%= link %>" type="text" onclick="this.select()">
+	          <% end %>
+	          <% flash.delete(name) %>
+	        </div>
+  		<% else %>
+	        <div class="alert alert-danger">
+	          <a class="close" data-dismiss="alert">&#215;</a>
+	          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+	          <% flash.delete(name) %>
+	        </div>
+       	<% end%>
     <% end %>
   <% end %>
 </div>

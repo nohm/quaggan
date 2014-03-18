@@ -35,9 +35,9 @@ Installation guide, set up PostgreSQL, then the project.
 * Create a user and the databases
 ```
 createuser quaggan -d -s
-createdb -Obadger -Eutf8 quaggan_development (only needed for development)
-createdb -Obadger -Eutf8 quaggan_production (only needed for production)
-createdb -Obadger -Eutf8 quaggan_test (only needed for development)
+createdb -Oquaggan -Eutf8 quaggan_development (only needed for development)
+createdb -Oquaggan -Eutf8 quaggan_production (only needed for production)
+createdb -Oquaggan -Eutf8 quaggan_test (only needed for development)
 ```
 
 #### Project
