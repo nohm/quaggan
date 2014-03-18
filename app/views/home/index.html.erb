@@ -1,16 +1,16 @@
-  <%= bootstrap_form_for(@link, :url => root_path) do |f| %>
-    <%= f.alert_message 'Errors!' %>
-    
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <div class="panel-title">Quaggan shorten link!</div>
-      </div>
-      <div class="panel-body">
-        <%= f.text_field :original, hide_label: true, placeholder: 'http://example.com/' %>
-        <%= f.text_field :mask, hide_label: true, placeholder: 'Optional mask e.g. example-mask' %>
-      </div>
-      <div class="panel-footer">
-        <%= f.submit 'Shorten!' %>
-      </div>
+<%= bootstrap_form_for(@link, :url => root_path) do |f| %>
+  <%= f.alert_message 'Errors!' %>
+  
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <div class="panel-title">Quaggan shorten link!</div>
     </div>
-  <% end %>
+    <div class="panel-body">
+      <%= f.text_field :original, hide_label: true, placeholder: 'http://example.com/' %>
+      <%= f.text_field :mask, hide_label: true, placeholder: 'Optional mask e.g. example-mask' %>
+    </div>
+    <div class="panel-footer">
+      <%= f.submit 'Shorten!' %>
+    </div>
+  </div>
+<% end %>
