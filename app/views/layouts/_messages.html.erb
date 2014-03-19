@@ -1,7 +1,7 @@
 <div id="alert-box">
   <% flash.each do |name, msg| %>
     <% if msg.is_a?(String) %>
-      <% if name == "notice" %>
+      <% if name == :notice %>
         <div class="alert alert-success">
           <div>Coo! Links made!</div>
           <% msg.split('<br>').each do |link| %>

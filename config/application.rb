@@ -10,6 +10,12 @@ module Quaggan
   class Application < Rails::Application
 
     config.middleware.use Rack::Deflater
+    config.middleware.use Rack::Cors do
+      allow do
+        origins '*'
+        resource '*', :headers => :any, :methods => [:get, :post, :options]
+      end
+    end
     config.i18n.enforce_available_locales = true
 
     config.generators do |g|

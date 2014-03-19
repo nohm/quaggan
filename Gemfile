@@ -21,6 +21,8 @@ gem 'jbuilder'
 gem 'bootstrap_form'
 # Protection
 gem 'figaro'
+# Cross-Site JSON
+gem 'rack-cors'
 
 group :assets do
   # Javascript engine
