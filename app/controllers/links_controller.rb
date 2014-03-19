@@ -13,7 +13,11 @@ class LinksController < ApplicationController
 
     # mask has to be unique, obviously
     elsif params[:link][:mask] != '' and Link.where('mask ILIKE ?', params[:link][:mask]).count != 0
-      response = 'This mask already exists!'
+      response = 'Given mask already exists!'
+
+    # original must be a valid url
+    elsif !Link.valid?(params[:link][:original])
+      response = 'That ain\'t no valid URL!'
 
     # no matches? store it!
     else
@@ -33,16 +37,16 @@ class LinksController < ApplicationController
         response = 'Error saving URL, forgot something?'
 
       end
+    end
 
-      respond_to do |format|
-        format.js {
-          render json: response.split('<br>')
-        }
-        format.html {
-          flash[success ? :notice : :alert] = response
-          redirect_to root_path
-        }
-      end
+    respond_to do |format|
+      format.js {
+        render json: response.split('<br>')
+      }
+      format.html {
+        flash[success ? :notice : :alert] = response
+        redirect_to root_path
+      }
     end
   end
 
