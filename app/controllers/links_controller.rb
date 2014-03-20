@@ -1,23 +1,28 @@
 class LinksController < ApplicationController
   def create
     response = ''
+    status = :created
     success = false
 
     # don't allow empty fields
     if params[:link].nil? or params[:link][:original].nil? or params[:link][:mask].nil?
-      response = 'Please enter all field: link[original] and link[mask]'
+      response = 'Please enter all fields: link[original] and link[mask]'
+      status = :bad_request
 
     # numbers are reserved for ids
     elsif params[:link][:mask] =~ /^-?[0-9]+$/
       response = 'You can\t mask URLs with numbers!'
+      status = :bad_request
 
     # mask has to be unique, obviously
     elsif params[:link][:mask] != '' and Link.where('mask ILIKE ?', params[:link][:mask]).count != 0
       response = 'Given mask already exists!'
+      status = :not_acceptable
 
     # original must be a valid url
     elsif !Link.valid?(params[:link][:original])
       response = 'That ain\'t no valid URL!'
+      status = :bad_request
 
     # no matches? store it!
     else
@@ -35,13 +40,14 @@ class LinksController < ApplicationController
 
       else
         response = 'Error saving URL, forgot something?'
+        status = :bad_request
 
       end
     end
 
     respond_to do |format|
       format.js {
-        render json: response.split('<br>')
+        render json: response.split('<br>'), status: status
       }
       format.html {
         flash[success ? :notice : :alert] = response
@@ -52,6 +58,7 @@ class LinksController < ApplicationController
 
   def show
     response = ''
+    status = :found
     success = false
 
     begin
@@ -67,12 +74,13 @@ class LinksController < ApplicationController
 
     rescue
       response = "Uh oh! Link not found with id '#{params[:id]}'"
-      
+      status = :not_found
+
     end
 
     respond_to do |format|
       format.js { 
-        render json: response
+        render json: response, status: status
       }
       format.html {
         if success
