@@ -77,7 +77,7 @@ class LinksController < ApplicationController
       success = true
 
     rescue
-      response = "Uh oh! Link not found with id '#{params[:id]}'"
+      response = "Uh-oh! Link not found with #{params[:id] =~ /^-?[0-9]+$/ ? 'ID' : 'mask'} #{params[:id]}"
       status = :not_found
 
     end
