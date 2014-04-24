@@ -30,7 +30,7 @@ class LinksController < ApplicationController
 
     # no matches? store it!
     else
-      clean_mask = params[:link][:mask].downcase.gsub(/[^a-z0-9- ]/, '').gsub(/ /, '-')
+      clean_mask = params[:link][:mask].downcase.gsub(/[^a-z0-9\- ]/, '').gsub(/ /, '-')
       params[:link][:mask] = clean_mask
 
       @link = Link.new(params[:link].permit(:original,:mask))

@@ -17,6 +17,7 @@ module Quaggan
       end
     end
     config.i18n.enforce_available_locales = true
+    config.lograge.enabled = true
 
     config.generators do |g|
       
